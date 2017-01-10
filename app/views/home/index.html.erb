@@ -1,0 +1,12 @@
+<center><% if user_signed_in? %>
+
+<h3>you have succesfully signed in</h3></center>
+<%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+
+<% else %>
+<center>
+<h1> Welcome to Personal Gallery Home Page</h1>
+<%= link_to "Sign In", new_user_session_path, :method => :get %>
+<%= link_to "Sign up", new_user_registration_path, :method => :get %>
+
+<% end %></center>
